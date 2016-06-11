@@ -1,7 +1,7 @@
 ## rosdocked
 
-Run ROS Ubuntu Trusty / indigo on any platform with a shared username, home
-directory, and X11.
+Run ROS Indigo on Ubuntu Trusty within Docker on any platform with a shared
+username, home directory, and X11.
 
 This enables you to build and run a persistent ROS Indigo workspace as long as
 you can run Docker images.
