@@ -1,6 +1,6 @@
-## rosdocked
+## gazebodocked
 
-Run ROS Indigo / Ubuntu Trusty within Docker on Ubuntu Xenial or on any platform with a shared
+Run ROS Indigo / Ubuntu Trusty / Gzebo7 within Docker on Ubuntu Xenial or on any platform with a shared
 username, home directory, and X11.
 
 This enables you to build and run a persistent ROS Indigo workspace as long as
@@ -15,7 +15,7 @@ For more info on Docker see here: https://docs.docker.com/engine/installation/li
 This will create the image with your user/group ID and home directory.
 
 ```
-./build.sh IMAGE_NAME
+./build.sh
 ```
 
 ### Run
@@ -23,7 +23,7 @@ This will create the image with your user/group ID and home directory.
 This will run the docker image.
 
 ```
-./dock.sh IMAGE_NAME
+./run.sh
 ```
 
 The image shares it's  network interface with the host, so you can run this in

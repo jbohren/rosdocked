@@ -8,7 +8,7 @@ ARG workspace
 ARG shell
 
 # Basic Utilities
-RUN apt-get -y update && apt-get install -y zsh screen tree sudo ssh synaptic
+RUN apt-get -y update && apt-get install -y zsh screen tree sudo
 
 # Latest X11 / mesa GL
 RUN apt-get install -y\
@@ -29,15 +29,13 @@ RUN apt-get install -y\
   libxcb-render-util0 libxcb-util0 libxcb-xkb1 libxkbcommon-x11-0\
   libxkbcommon0
 
-# The rest of ROS-desktop
-RUN apt-get install -y ros-indigo-desktop-full
-
 # Additional development tools
 RUN apt-get install -y x11-apps python-pip build-essential
 RUN pip install catkin_tools
 
-# Make SSH available
-EXPOSE 22
+RUN apt-get install -y wget
+COPY gazebo7_install.sh /
+RUN sh /gazebo7_install.sh
 
 # Mount the user's home directory
 VOLUME "${home}"
