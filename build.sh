@@ -3,7 +3,7 @@
 # Check args
 if [ "$#" -ne 1 ]; then
   echo "usage: ./build.sh IMAGE_NAME"
-  return 1
+  exit 1
 fi
 
 # Get this script's path
